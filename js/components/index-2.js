@@ -1,7 +1,13 @@
 
-console.log($);
+require(['jquery'], function($){
+    console.log($);
+});
 
-console.log(ScrollMagic);
+require(['scrollmagic'], function(ScrollMagic){
+    console.log(ScrollMagic);
+});
+
+
 console.log(pero);
 
 function shared(){

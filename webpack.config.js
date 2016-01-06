@@ -17,7 +17,7 @@ module.exports = {
 
     resolve: {
         extensions: ['', '.js', '.jsx'], // resolve file extentions so that we don't have to specify the extention for js and jsx files,
-        modulesDirectories: ['js', 'node_modules']
+        modulesDirectories: ['node_modules', 'js']
     },
 
 
@@ -27,9 +27,9 @@ module.exports = {
             filename: 'common.js'
         }),
         new webpack.ProvidePlugin({
-            $: "jquery",
-            jQuery: "jquery",
-            ScrollMagic: 'scrollmagic'
+            // $: "jquery",
+            // jQuery: "jquery",
+            // ScrollMagic: 'scrollmagic'
         })
     ]
 };
