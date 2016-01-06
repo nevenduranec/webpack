@@ -1,0 +1,8 @@
+
+console.log($);
+
+function shared(){
+    console.log('shared 11111');
+}
+
+shared();

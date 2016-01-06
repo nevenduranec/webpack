@@ -6,7 +6,9 @@
     "dev": "webpack-dev-server"
   },
   "devDependencies": {
+    "bundle-loader": "^0.5.4",
     "jquery": "^2.1.4",
+    "scrollmagic": "^2.0.5",
     "webpack": "^1.10.5",
     "webpack-dev-server": "1.10.1"
   }

@@ -1,19 +1,18 @@
 var webpack = require('webpack');
-var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common.js');
-
 var rootDir = __dirname;
-var srcDir = rootDir + "/src";
-var distDir = rootDir + "/dist";
+var nodeDir = rootDir + '/node_modules/';
 
 module.exports = {
     context: rootDir, // a base directory to resolve the “entry”
 
-    entry: 'main.js',
+    entry: {
+        main: 'main.js'
+    },
 
     output: {
-        path: distDir,
-        publicPath: '/js/',
-        filename: "main-built.js" // [name] means we are going to use the "key" value of each entry as the bundle file name
+        path: './js/built/',
+        publicPath: './js/built/',
+        filename: "[name].js" // [name] means we are going to use the "key" value of each entry as the bundle file name
     },
 
     resolve: {
@@ -23,6 +22,13 @@ module.exports = {
 
 
     plugins: [
-        commonsPlugin
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'common',
+            filename: 'common.js'
+        }),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
+        })
     ]
 };
