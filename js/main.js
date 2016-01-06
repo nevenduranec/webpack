@@ -1,7 +1,5 @@
 'use strict';
 
-require('jquery');
-
 (function($, window, undefined){
 
     if (window.location.pathname === '/index.html') {

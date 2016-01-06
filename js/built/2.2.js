@@ -8,9 +8,8 @@ webpackJsonp([2,3],[
 	/* WEBPACK VAR INJECTION */(function($, ScrollMagic) {
 	console.log($);
 
-	__webpack_require__(4);
-
 	console.log(ScrollMagic);
+	console.log(pero);
 
 	function shared(){
 	    console.log('shared 2222');
