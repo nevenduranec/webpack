@@ -17,7 +17,7 @@ module.exports = {
 
     resolve: {
         extensions: ['', '.js', '.jsx'], // resolve file extentions so that we don't have to specify the extention for js and jsx files,
-        modulesDirectories: ['node_modules', 'js']
+        modulesDirectories: ['node_modules', 'js', 'scss']
     },
 
 
@@ -31,5 +31,19 @@ module.exports = {
             // jQuery: "jquery",
             // ScrollMagic: 'scrollmagic'
         })
-    ]
+    ],
+
+    module: {
+        loaders: [
+            {
+                test: /\.scss$/,
+                loaders: ['style', 'css', 'sass']
+            }
+        ]
+    },
+
+    sassLoader: {
+        includePaths: rootDir + '/sass/'
+    }
+
 };

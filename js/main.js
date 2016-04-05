@@ -1,8 +1,4 @@
-'use strict';
-
 require(['jquery'], function($){
-    console.log($);
-
 
     if (window.location.pathname === '/index.html') {
         require.ensure([], function() {

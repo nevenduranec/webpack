@@ -7,9 +7,13 @@
   },
   "devDependencies": {
     "bundle-loader": "^0.5.4",
+    "css-loader": "^0.23.1",
     "foundation-sites": "^6.1.1",
     "jquery": "^2.1.4",
+    "node-sass": "^3.4.2",
+    "sass-loader": "^3.2.0",
     "scrollmagic": "^2.0.5",
+    "style-loader": "^0.13.1",
     "webpack": "^1.10.5",
     "webpack-dev-server": "1.10.1"
   }
